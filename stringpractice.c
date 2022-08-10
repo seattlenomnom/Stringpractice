@@ -2,6 +2,7 @@
  * source file for stringpractice, a program to develop my skills in using
  * C's string functions, defined in <string.h>.
  *
+ * Programmer: Mark Crapser
 */
 
 
