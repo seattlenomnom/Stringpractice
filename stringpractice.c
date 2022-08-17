@@ -21,6 +21,12 @@
  * Why won't the string printf()?
  *
  * I have not changed to the do while structure!.
+ *
+ * Rememeber that getchar() will put newline into string. You need to
+ * overwrite it with the \0.
+ *
+ * I need to study C library functions. What they do, where you use them,
+ * and how to use their return values to perform error checking.
 */
 
 
@@ -36,24 +42,22 @@
 
 int main(int argc, char *argv[]) {
 
-    char string[MAX_LENGTH], text[] = {'M', 'a', 'r', 'k'};
-    int index, character;
+    char string[MAX_LENGTH], character;
+    int index;
 
+    /* input string from console with getchar() in a do..while */
     index = 0;
-    while((character = getchar() != '\n') && index <= MAX_LENGTH - 2) {
+    do {
+        character = getchar();
         string[index] = character;
         ++index;
-    }
-    string[index] = '\0';
+    } while((character != '\n') && (index <= MAX_LENGTH - 2));
+    string[index - 1] = '\0';
 
-    index = 0;
-    while(string[index] != '\0')
-        ++index;
-    printf("length = %i\n", index);
+    printf("The string is:\n");
+    printf("%s\n", string);
 
-    printf("The string is \n");
 
-    printf("%s\n", text);
 
 
 

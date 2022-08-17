@@ -3,5 +3,20 @@
 *  found in <string.h>
 *
 *  Programmer: Mark Crapser
+*  08/16/2022
+* Ok, a complicated situation: I can create the string that I want from the
+* console. It involves getchar() and some extra code. It is very capable.
+* But what are all those C string library functions for? I need to study
+* those. I can move back to my original problem -- can't remember the name.
 *
+* Why won't the string printf()?
+*
+* I have not changed to the do while structure!.
+*
+* Rememeber that getchar() will put newline into string. You need to
+* overwrite it with the \0.
+*
+* I need to study C library functions. What they do, where you use them,
+* and how to use their return values to perform error checking.
+
 */
